@@ -1,11 +1,8 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
-        applicationId "com.startsmake.llrisetabbardemo"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
@@ -21,7 +18,5 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.0'
-    compile project(':mainnavigatetabbar')
+    compile 'com.android.support:appcompat-v7:23.1.1'
 }

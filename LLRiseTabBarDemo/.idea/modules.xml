@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LLRiseTabBarDemo.iml" filepath="$PROJECT_DIR$/LLRiseTabBarDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mainnavigatetabbar/mainnavigatetabbar.iml" filepath="$PROJECT_DIR$/mainnavigatetabbar/mainnavigatetabbar.iml" />
     </modules>
   </component>
 </project>

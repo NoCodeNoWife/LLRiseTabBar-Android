@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/main_content_layout"
+
+    <FrameLayout
+        android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_above="@+id/mainTabBar"/>
 
-        <FrameLayout
-            android:id="@+id/main_container"
-            android:layout_width="match_parent"
-            android:layout_height="0.0dip"
-            android:layout_weight="1.0"/>
+    <com.startsmake.mainnavigatetabbar.widget.MainNavigateTabBar
+        android:id="@+id/mainTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:containerId="@+id/main_container"
+        app:navigateTabSelectedTextColor="@color/comui_tab_text_color"
+        app:navigateTabTextColor="@color/comui_tab_text_color"/>
 
-        <com.startsmake.llrisetabbardemo.widget.MainNavigateTabBar
-            android:id="@+id/mainTabBar"
-            android:layout_width="match_parent"
-            android:layout_height="50.0dip"
-            android:background="@android:color/white"/>
-
-    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/main_content_layout"
-        android:layout_marginBottom="50.0dip"
+        android:layout_above="@+id/mainTabBar"
         android:background="@mipmap/comui_bar_top_shadow"/>
 
     <LinearLayout
@@ -41,9 +39,9 @@
 
         <ImageView
             android:id="@+id/tab_post_icon"
-            android:onClick="onClickPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickPublish"
             android:src="@mipmap/comui_tab_post"/>
     </LinearLayout>
 </RelativeLayout>
